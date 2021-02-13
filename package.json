@@ -1,0 +1,19 @@
+{
+  "name": "hw13-burger-app",
+  "version": "1.0.0",
+  "description": "This app uses Node, Express, Handlebars & mySQL and is deployed on Heroku",
+  "main": "server.js",
+  "scripts": {
+    "test": "there is no test command for this app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streamingTurtles/13-NHE-BurgerApp.git"
+  },
+  "author": "I made this, PAC with Streaming Turtles, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/streamingTurtles/13-NHE-BurgerApp/issues"
+  },
+  "homepage": "https://github.com/streamingTurtles/13-NHE-BurgerApp#readme"
+}
