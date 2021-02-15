@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/streamingTurtles/13-NHE-BurgerApp/issues"
   },
-  "homepage": "https://github.com/streamingTurtles/13-NHE-BurgerApp#readme"
+  "homepage": "https://github.com/streamingTurtles/13-NHE-BurgerApp#readme",
+  "dependencies": {
+    "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
 }
