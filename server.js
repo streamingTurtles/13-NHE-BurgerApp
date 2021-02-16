@@ -11,6 +11,7 @@ const app = express();
 
 // render static content from the public folder
 app.use(express.static("public"));
+app.use(express.static("public/assets/img")); // for the icon
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
