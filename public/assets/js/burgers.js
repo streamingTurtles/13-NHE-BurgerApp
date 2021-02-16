@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             eating: newEating,
           };
   
+          
           fetch(`/api/burger/${id}`, {
             method: 'PUT',
             headers: {
