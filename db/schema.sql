@@ -25,12 +25,12 @@ SELECT * FROM burgers;
 
 
 
+-- IMPORTANT !!!
+-- FYI - when running on Heroku, make sure to replace every instance of burgers_db 
+-- with the name of the database given for the JawsDB 
+-- which for my case is = iif8e3kkfh8tmgmx 
 
-
-
-
-
-
+-- not used - names too long, use seeding info above 
 -- INSERT burgers(burger_name, devoured) VALUES
 -- ("Hamburger, 8 oz. Angus",false),
 -- ("Cheeseburger, 10 oz. Angus",false),
