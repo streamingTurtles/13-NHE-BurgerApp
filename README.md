@@ -16,7 +16,7 @@
 
 
   - - -
-  ## Screenshot of the App running in the terminal:
+  ## Screenshot of the App running as localhost:8080 in the browser:
   ![Screenshot](public/assets/img/HW-13-Burger-pic-1.png)
   ===
   ## Adding "The Friday Burger"
