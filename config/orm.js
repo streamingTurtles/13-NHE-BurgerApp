@@ -11,7 +11,7 @@ const connection = require('./connection.js');
 // Object for all our SQL statement functions.
 const orm = {
     // javascript get everything from a table, put in result
-    all(tableInput, cb) {
+    selectAll(tableInput, cb) {
       const queryString = `SELECT * FROM ${tableInput};`;
       connection.query(queryString, (err, result) => {
         if (err) {
