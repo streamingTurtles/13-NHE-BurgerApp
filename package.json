@@ -4,7 +4,8 @@
   "description": "This app uses Node, Express, Handlebars & mySQL and is deployed on Heroku",
   "main": "server.js",
   "scripts": {
-    "test": "there is no test command for this app"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

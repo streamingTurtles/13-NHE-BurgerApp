@@ -11,7 +11,9 @@ const app = express();
 
 // render static content from the public folder
 app.use(express.static("public"));
-app.use(express.static("public/assets/img")); // for the icon
+// for the icon
+// https://stackoverflow.com/questions/35815840/displaying-images-in-a-handlebars-html
+app.use(express.static("public/assets/img")); 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
