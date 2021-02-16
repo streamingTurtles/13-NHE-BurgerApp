@@ -81,5 +81,5 @@ const orm = {
 
 // Exporting the ORM object to use in the model file: burgerController.js
 // Note: in burgerController.js - is where we use express to navigate our routing
-modules.export = orm;
+module.exports = orm;
 

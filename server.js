@@ -3,12 +3,24 @@
 const appName = require('asciiart-logo');
 require('console.table');
 
-
-
-const express = require('express');
 const PORT = process.env.PORT || 8080;
 
+const express = require('express');
 const app = express();
+// render statuc content from the public folder
+app.use(express.static("public"));
+// Parse application body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Handlebars import here once routes are connecting correctly
+
+
+
+// Import routes and give the server access to them.
+const routes = require('./controllers/burgers_controller.js');
+app.use(routes);
+
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, () =>
