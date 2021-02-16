@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             eating: newEating,
           };
   
-          
-          fetch(`/api/burger/${id}`, {
+
+          fetch(`/api/burgers/${id}`, {
             method: 'PUT',
             headers: {
               Accept: 'application/json',
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         };
   
         // Send POST request to create a new quote
-        fetch('/api/burger', {
+        fetch('/api/burgers', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const id = e.target.getAttribute('data-id');
   
         // Send the delete request
-        fetch(`/api/burger/${id}`, {
+        fetch(`/api/burgers/${id}`, {
           method: 'DELETE',
         }).then((res) => {
           console.log(res);
