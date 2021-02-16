@@ -1,30 +1,38 @@
-<h1>Streaming Turtles</h1>
+<h1>HAMBURGERS!</h1>
 
+<h2>Burgers that you can EAT!</h2>
 
-<h1>Burger Stuff</h1>
-<div class="row">
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burgers/burger-block eaten=true}}
+  {{/unless}}
+  {{/each}}
+</ul>
 
-<div class="col">
-<h2>Burgers Not Eaten</h2>
-<ul class="list-group" id="not-eaten-ul">
-	</ul>
-</div>
+<h2>Burgers that you ATE!</h2>
 
-<div class="col">
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burgers/burger-block eaten=false}}
+  {{/if}}
+  {{/each}}
+</ul>
+
 <h2>Add a Burger</h2>
-<form class="create-form">
+<form id="create-form">
 
   <div class="form-group">
-    <label for="burger-name">Burger Name:</label>
-    <input type="text" id="burger-name" name="name">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
   </div>
 
   <div class="form-group">
-    <label for="is-eaten">Has it been eaten?</label><br>
-    <input type="radio" name="is-eaten" value="1" checked> It's eaten!<br>
-    <input type="radio" name="is-eaten" value="0"> Still there
+    <label for="devoured">devoured?</label><br>
+    <input type="radio" name="devoured" value="1" id="devoured" checked> devoured!<br>
+    <input type="radio" name="devoured" value="0" id="not-eaten"> not-eaten
   </div>
 
-  <button type="submit" class="btn btn-success">Add New Burger</button>
+  <button type="submit">Add Burger</button>
 </form>
-</div>
