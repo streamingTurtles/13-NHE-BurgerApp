@@ -4,21 +4,37 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 
 CREATE TABLE burgers(
-    id INT AUTO_INCREMENT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(200) NOT NULL,
-    devoured BOOLEAN default 0,
+    devoured BOOLEAN default false,
     PRIMARY KEY (id)
 );
 
 
--- seed data input with some traditional hamburgers
 
-INSERT burgers(burger_name, devoured) VALUES
-("Hamburger, 8 oz. Angus",false),
-("Cheeseburger, 10 oz. Angus",false),
-("Bacon Cheesburger, 10 oz. Angus",false),
-("Mushroom Bacon Cheeseburger, 10 oz. Angus",false),
-("Double Cheeder Bacon Mushroom Burger, 12 oz. Angus",false),
-("Classic 10 oz. Steak Burger w or w/o cheese",false);
+-- seed data input with some traditional hamburgers
+INSERT INTO burgers (burger_name) VALUES ('small hamburger');
+INSERT INTO burgers (burger_name) VALUES ('medium hamburger');
+INSERT INTO burgers (burger_name, devoured) VALUES ('cheesburger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('double burger', true);
+INSERT INTO burgers (burger_name, devoured) VALUES ('bacon burger', true);
+INSERT INTO burgers (burger_name) VALUES ('pizza burger');
+
 
 SELECT * FROM burgers;
+
+
+
+
+
+
+
+
+
+-- INSERT burgers(burger_name, devoured) VALUES
+-- ("Hamburger, 8 oz. Angus",false),
+-- ("Cheeseburger, 10 oz. Angus",false),
+-- ("Bacon Cheesburger, 10 oz. Angus",false),
+-- ("Mushroom Bacon Cheeseburger, 10 oz. Angus",false),
+-- ("Double Cheeder Bacon Mushroom Burger, 12 oz. Angus",false),
+-- ("Classic 10 oz. Steak Burger w or w/o cheese",false);

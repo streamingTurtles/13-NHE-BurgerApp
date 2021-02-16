@@ -2,12 +2,45 @@
 // database using an object-oriented paradigm 
 const connection = require('./connection.js');
 
+
+
+// Helper function for SQL syntax to add question marks (?, ?, ?) in query
+const printQuestionMarks = (num) => {
+    const arr = [];  
+    for (let i = 0; i < num; i++) {
+      arr.push('?');
+    }  
+    return arr.toString();
+  };  
+  // Helper function to convert object key/value pairs to SQL syntax
+  const objToSql = (ob) => {
+    const arr = [];  
+    // Loop through the keys and push the key/value as a string int arr
+    for (const key in ob) {
+      let value = ob[key];
+      // Check to skip hidden properties
+      if (Object.hasOwnProperty.call(ob, key)) {
+        // If string with spaces, add quotations (double cheesburger => 'double cheesburger)
+        if (typeof value === 'string' && value.indexOf(' ') >= 0) {
+          value = `'${value}'`;
+        }
+        // i.e {name: 'double cheesburger'} => ["name='double cheesburger'"]
+        // i.e {devoured: true} => ["devoured=true"]
+        arr.push(`${key}=${value}`);
+      }
+    }  
+    // Translate array of strings to a single comma-separated string
+    return arr.toString();
+  };
+
+
+
+
 // build out the object represenation database query functionality in javascript 
 // so that now when you want to work on 
 // some data from the db, you can just call a function that will mimic SQL db commands.
 // i.e. - you don't have to write out SQL commands now.
-
-
+//
 // Object for all our SQL statement functions.
 const orm = {
     // javascript get everything from a table, put in result

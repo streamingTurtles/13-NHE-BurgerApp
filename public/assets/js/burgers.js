@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // UPDATE
-    const changeEatenBtns = document.querySelectorAll('..change-eaten');
+    const changeEatenBtns = document.querySelectorAll('.change-eaten');
   
     // Set up the event listener for the create button
     if (changeEatenBtns) {
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
           const id = e.target.getAttribute('data-id');
           const newEating = e.target.getAttribute('data-newEating');
   
-          const newEatState = {
-            eating: newEating,
+          const newEatingState = {
+            devoured: newEating,
           };
   
 
@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             },
   
             // make sure to serialize the JSON body
-            body: JSON.stringify(newEatState),
+            body: JSON.stringify(newEatingState),
           }).then((response) => {
             // Check that the response is all good
             // Reload the page so the user can see the new quote
             if (response.ok) {
-              console.log(`changed devoured state to: ${newEating}`);
+              console.log(`changed eating state to: ${newEating}`);
               location.reload('/');
             } else {
               alert('something went wrong!');
@@ -44,16 +44,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // CREATE
-    const createCatBtn = document.getElementById('create-form');
+    const createBurgerBtn = document.getElementById('create-form');
   
-    if (createCatBtn) {
-      createCatBtn.addEventListener('submit', (e) => {
+    if (createBurgerBtn) {
+      createBurgerBtn.addEventListener('submit', (e) => {
         e.preventDefault();
   
         // Grabs the value of the textarea that goes by the name, "quote"
-        const newCat = {
-          name: document.getElementById('ca').value.trim(),
-          eating: document.getElementById('eating').checked,
+        const newBurger = {
+          // finally found bug here - fixed and working - syntax issue with burger_name
+          burger_name: document.getElementById('ca').value.trim(),
+          devoured: document.getElementById('devoured').checked,
         };
   
         // Send POST request to create a new quote
@@ -65,13 +66,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
           },
   
           // make sure to serialize the JSON body
-          body: JSON.stringify(newCat),
+          body: JSON.stringify(newBurger),
         }).then(() => {
           // Empty the form
           document.getElementById('ca').value = '';
   
-          // Reload the page so the user can see the new quote
-          console.log('Make a new Burger to eat!');
+          // Reload the page so the user can see the new burger to eat
+          console.log('Made a new Burger to eat!');
           location.reload();
         });
       });
