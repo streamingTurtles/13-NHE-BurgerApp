@@ -9,9 +9,29 @@
   - [Testing Instructions](#testing-instructions)
   - [License Type](#license-type)
   - [Github Repo Link](#github-repo-link)
-  - [Github Live Web Link](#github-live-web-link)
+  - [HEROKU Live APP Link](https://radiant-springs-30491.herokuapp.com/)
   - [Github Information](#github-information)
   - [my-email-for-questions-and-information](#my-email-for-questions-and-information)
+
+
+
+  - - -
+  ## Screenshot of the App running in the terminal:
+  ![Screenshot](public/assets/img/HW-13-Burger-pic-1.png)
+  ===
+  ## Adding "The Friday Burger"
+  ![Screenshot](public/assets/img/HW-13-Burger-pic-2.png)
+  ===
+  ## Devouring "The Friday Burger", which places it on the right, seen in next pic
+  ![Screenshot](public/assets/img/HW-13-Burger-pic-3.png)
+  ===
+  ## Choosing to "Eat Another One" of "The Friday Burger", which places it now on left side, so you can eat it again.
+  ![Screenshot](public/assets/img/HW-13-Burger-pic-4.png)
+
+
+
+
+
 
   &nbsp;
   - - -
@@ -50,7 +70,7 @@
 
   &nbsp;
   - - -
-  ## Github Live Web Link:
+  ## HEROKU Live Application URL:
   - https://radiant-springs-30491.herokuapp.com/
 
   &nbsp;
