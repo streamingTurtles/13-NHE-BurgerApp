@@ -11,7 +11,7 @@ const dotenv = require('dotenv').config();
 //     host: 'localhost',
 //     port: 3306,
 //     // user: 'root',
-//     // password: 'mysqlforme2912PAC!',
+//     // password: 'xxx',
 //     user: process.env.DB_USER,
 //     password: process.env.DB_PASSWORD,   
 //     database: 'burgers_db'  
@@ -26,7 +26,7 @@ if (process.env.JAWSDB_URL) {
         host: 'localhost',
         port: 3306,
         // user: 'root',
-        // password: 'mysqlforme2912PAC!',
+        // password: 'xxx',
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,   
         database: 'burgers_db'  
