@@ -6,16 +6,32 @@ require('console.table');
 const dotenv = require('dotenv').config();
 
 
+// comment out - have to update for now using JawsDB on Heroku - see directly below the new connection
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     port: 3306,
+//     // user: 'root',
+//     // password: 'mysqlforme2912PAC!',
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,   
+//     database: 'burgers_db'  
+// });
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    // user: 'root',
-    // password: 'mysqlforme2912PAC!',
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,   
-    database: 'burgers_db'  
-});
+// adding Jawsdb on Heroku
+let connection;
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+    } else {
+        connection = mysql.createConnection({
+        host: 'localhost',
+        port: 3306,
+        // user: 'root',
+        // password: 'mysqlforme2912PAC!',
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,   
+        database: 'burgers_db'  
+    });
+}
 
 
 // check the db connection
